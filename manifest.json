@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "CodeCrackUps",
+    "version": "1.0",
+    "description": "Shows memes when you search or use AI tools or debug.",
+    "permissions": [
+        "tabs",
+        "scripting"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "memes/*"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
